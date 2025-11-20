@@ -8,5 +8,6 @@ public class HelloPenguins {
     public static void main(String[] args) {
         System.out.println("Hallo Pinguine !");
         System.out.println("Ich freue mich übermäßig auf PGdP!" );
+        System.out.println("Cov ya Mnayek ! ");
     }
 }
