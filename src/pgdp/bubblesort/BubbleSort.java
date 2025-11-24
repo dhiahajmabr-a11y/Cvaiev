@@ -2,11 +2,19 @@ package pgdp.bubblesort;
 
 public class BubbleSort {
 
-	//TODO 1.0: Implement the method to sort a given array in ascending order.
 	public static void bubbleSort(int[] fish) {
+		int length = fish.length;
 
+		while (length != 1) {
+			for (int i = 0; i < length - 1; i++) {
+				if (fish[i] > fish[i + 1]) {
+					int tmp = fish[i];
+					fish[i] = fish[i + 1];
+					fish[i + 1] = tmp;
+				}
+			}
+			length--;
+		}
 	}
 }
-
-
-
+//dhiadhiadhia
