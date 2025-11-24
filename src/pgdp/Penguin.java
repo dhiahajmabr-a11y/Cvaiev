@@ -13,5 +13,7 @@ public class Penguin {
         return age;
     }
 
+    System.out.println("Hello, party penguins!");
+
 }
 
