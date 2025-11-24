@@ -6,6 +6,8 @@ import static pgdp.PinguLib.writeConsole;
 
 import java.util.Random;
 
+// Hezzzzzzzzzzzzzzz
+
 /**
  * You can change this class however you like as long as you do not delete any
  * existing method. However, you can change them.
@@ -95,3 +97,6 @@ public class AI {
 	}
 
 }
+
+
+
