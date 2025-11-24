@@ -1,0 +1,26 @@
+Einführung
+In dieser Aufgabe geht es um das Bubblesortverfahren.
+
+Pinguin Ole macht jede Woche Mittwoch seinen Wocheneinkauf. Jeden Mittwochmorgen geht er zum Fischmarkt und
+ sucht sich die schönsten Fische heraus. Da aber nicht jeder Fisch gleich groß ist, stellt sich für Ole die Frage,
+ in welcher Reihenfolge er die Fische isst.
+Da Ole seine Selbstdisziplin üben möchte, hat er sich vorgenommen, erst die kleinen und erst zum Schluss die großen Fische zu essen.
+Um diesem Vorhaben auch nachzukommen, muss Ole ersteinmal seine Fische sortieren. Hierfür möchte er Bubblesort nutzen.
+
+Bubblesort
+Das Bubblesortverfahren heißt so, weil die größeren Elemente wie Luftblasen im Wasser aufsteigen. Wenn man mit dem Sortieren fertig ist, sind die Elemente in aufsteigender Reihenfolge angeordnet. Man beginnt, indem man das erste Element des Arrays mit dem zweiten vergleicht. Falls das erste Element größer als das zweite Element ist, tauschen die beiden Elemente die Plätze. Anschließend passiert das gleiche mit dem zweiten und dem dritten Element. Das ganze macht man nun bis man am Ende des Arrays angekommen ist. Da immer das größere Element weiter nach rechts verschoben wird, ist nun garantiert, dass das größte Element am Ende des Arrays steht. Diesen Vorgang kann man nun wiederholen, muss jedoch nicht mehr bis ans Ende gehen, da ja das letzte Element bereits an der richtigen Stelle ist. So sortiert sich das Array bei mehrfachen Anwenden des oben genannten Algorithmus langsam aber sicher von rechts nach links.
+
+Hier findest du ein kleines Schritt-für-Schritt Beispiel: (zum Ausklappen hier klicken)
+Für weitere Informationen schaut bei Wikipedia nach.
+
+Beispiele:
+ Umgedreht No results
+Hier wird der Worstcase für Bubblesort dargestellt, ein Array, welches absteigend sortiert ist.
+
+ Array aus der main No results
+Hier wird das Array aus der Main.java getestet:
+
+[6,1,6,8,9,1,9,1,5]
+So sollte das Ergebnis aussehen. (zum Ausklappen hier klicken)
+[1, 1, 1, 5, 6, 6, 8, 9, 9]
+ Randfälle und weitere Beispiele No results
