@@ -1,5 +1,7 @@
 package pgdp.collections;
 
+// Modification, HEZ
+
 public class Stack {
 
     // TODO: do your programming magic! 🐧
