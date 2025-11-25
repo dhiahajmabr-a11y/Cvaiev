@@ -1,27 +1,37 @@
 package pgdp.upa;
 
 public class Item {
-    public Item(String kind) {
+    private String kind;
+    private int price;
 
+    private static int mostExpensivePrice = 0;
+
+    public Item(String kind, int price) {
+        this.kind = kind;
+        setPrice(price);
     }
 
     public void setPrice(int price) {
-
+        this.price = price;
+        if (price > mostExpensivePrice) {
+            mostExpensivePrice = price;
+        }
     }
 
     public int getPrice() {
-        return -1;
-    }
-
-    public static int getMostExpensivePrice() {
-        return -1;
+        return price;
     }
 
     public String getKind() {
-        return null;
+        return kind;
     }
 
+    public static int getMostExpensivePrice() {
+        return mostExpensivePrice;
+    }
+
+    @Override
     public String toString() {
-        return "";
+        return "Item " + kind + " costs " + price;
     }
 }

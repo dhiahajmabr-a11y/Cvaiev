@@ -12,7 +12,7 @@ public class Main {
         // If your code does not compile on artemis, you will not get any points!
         Penguin alice = new Penguin();
         Penguin bob = new Penguin();
-        Item sword = new Item("Stick");
+        Item sword = new Item("Stick", 10);        
         sword.setPrice(10);
 
         bob.getStones();
