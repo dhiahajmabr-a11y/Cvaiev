@@ -13,7 +13,6 @@ public class Main {
         Penguin alice = new Penguin();
         Penguin bob = new Penguin();
         Item sword = new Item("Stick", 10);        
-        sword.setPrice(10);
 
         bob.getStones();
         alice.findStones(5);
