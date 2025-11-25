@@ -1,39 +1,36 @@
 package pgdp.upa;
 
 public class Main {
+    // This file is for you to try out stuff while developing.
+    // As long as it compiles, it has no effect on your grade.
     public static void main(String[] args) {
-        System.out.println("Add stuff here to try out your code!");
         sanityCheck();
+        System.out.println("You can try out stuff here!");
     }
 
-    private static void sanityCheck() {
-        // This method is to help you make sure, that your code compiles.
-        // It runs all public methods of Penguin and Item to check if anything is wrong with the signatures.
-        // If your code does not compile on artemis, you will not get any points!
-        Penguin alice = new Penguin();
-        Penguin bob = new Penguin();
-        Item sword = new Item("Stick", 10);        
-        sword.setPrice(10);
+    public static void sanityCheck() {
+        // DO NOT CHANGE THIS METHOD!
+        // This method does not do anything meaningful.
+        // It is just here to make sure you get a compilation error locally if
+        // you change a method signature or class name incorrectly.
+        // This will prevent you from making mistakes that would lead to compilation failures on tests!
+        Cake c1 = new Cake("chocolate", 3);
+        String f = c1.getFlavor();
+        c1.setFlavor("banana");
+        int i = c1.getNumberOfPieces();
+        c1.setNumberOfPieces(5);
+        i = c1.practicality();
+        i = c1.waste(3);
 
-        bob.getStones();
-        alice.findStones(5);
-        bob.findItem(sword);
-        alice.tradeWith(bob);
-        alice.currentItemKind();
-        bob.loseItem();
+        Bakery b = new Bakery(new Cake[]{c1});
+        Cake[] cs = b.getCakes();
+        Cake c2 = b.findMostPracticalCake();
+        c2 = b.findCakeFor(3);
+        c2 = b.findBetterCake(c1, c2, 3);
+
+        SheetCake sc = new SheetCake(new int[][]{{1}});
+        double d = sc.averageTastiness();
+        int t = sc.tastinessAround(0, 0, 1);
+
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,26 +1,70 @@
-Pinguin-Abenteuer
-Auf ihren Abenteuern stolpern die Pinguine oft über verschiedene Items oder Steine. Untereinander tauschen sie gerne Steine gegen Items. Manchmal verlieren sie Items auch wieder. In dieser Aufgabe implementierst du den Handel zwischen verschiedenen Pinguinen.
+Kuchen
+Die Klasse Cake repräsentiert einen Kuchen mit einem Namen und einer Anzahl von Stücken. Da die Kundschaft dieser Bäckerei ihre Kuchen gerne exakt gleich mit ihren Freunden teilen möchte, wollen wir als erstes herausfinden, wie praktisch die Anzahl der Stücke eines Kuchens ist. Ein Kuchen mit 4 Stücken lässt sich beispielsweise gut unter 1, 2 oder 4 Personen aufteilen, während ein Kuchen mit 7 Stücken nur unter 1 oder 7 Personen aufgeteilt werden kann. Du findest im Template zudem eine bereits implementierte toString() Methode. Diese kann dir Helfen, Kuchen in der Konsole anzuzeigen.
 
-Hinweis: Bei dieser Aufgabe geht es um die Modellierung einzelnen Klassen. Deswegen werden Folgefehler innerhalb einer Klasse NICHT berücksichtigt.
+Hinweis: numberOfPieces ist echt größer als 0. (also
+numberOfPieces
+>
+0
+numberOfPieces>0)
 
-Aufgabe
-Ergänze die Klassen Penguin und Item. Du kannst neue Felder und Methoden hinzufügen. Du darfst die Namen und Parameter der Methoden, die bereits vordefiniert sind, nicht ändern und sie nicht entfernen!
+Hinweis: Du findest im Template eine bereits implementierte toString() Methode. Diese kann dir Helfen, Kuchen in der Konsole anzuzeigen.
 
-Die Item-Klasse wird gebraucht, um die Items zu repräsentieren, die die Pinguine finden und mit denen sie Handel treiben. Penguin repräsentiert die Pinguine.
+ Praktisch No tests
+Implementiere die Methode practicality in der Klasse Cake, die die Praktikabilität eines Kuchens berechnet. Die Praktikabilität ist definiert als die Anzahl unterschiedlicher Gruppengrößen, unter denen der Kuchen exakt aufgeteilt werden kann.
+Hinweis: Eine Gruppe kann auch nur aus einer Person bestehen (auch hier wieder: die Gruppengröße ist echt größer als 0).
+Beispiel: Die Praktikabilität von einem Kuchen mit 12 Stücken ist 6
+ Verschwendung No tests
+Die Kundschaft unserer Bäckerei will auf keinen Fall einen Kuchen so teilen, dass nicht jeder Person gleich viele Stücke zugeteilt werden. Wenn z.B. ein Kuchen mit 3 Stücken unter 2 Personen aufgeteilt wird, bleibt ein Stück übrig, das weggeworfen werden muss. Implementiere die Methode waste(int numberOfPeople) in der Klasse Cake, die die Prozentzahl der verschwendeten Menge eines Kuchens berechnet, wenn dieser unter numberOfPeople aufgeteilt wird. Die Prozentzahl als abgerundeter Ganzzahlwert soll zurückgegeben werden.
+Hinweis: numberEaters ist echt größer als 0. (also
+numberEaters
+>
+0
+numberEaters>0)
 
-Zusätzlich gibt es die Klasse Main, in der du deinen Code ausführen und testen kannst. Die zusätzliche Methode sanityCheck() sollte nicht modifiziert werden. Wenn du da einen Compiler-Error erhältst, dann hast du entweder einen Syntax-Fehler in deinem Code oder du hast die Signatur einer der vorgegebenen Methoden verändert. Du kannst die Main-Methode verändern, um deinen Code auszuprobieren.
+Beispiel: Bei einem Kuchen mit 3 Stücken, der unter 2 Personen aufgeteilt wird, wird 33 zurückgegeben.
 
- Preise No tests
-Implementiere in der Klasse Item die Methoden setPrice(int price), getPrice() und getKind(), die als Getter und Setter funktionieren. Implementiere den in der Template vorgegebenen Konstruktor entsprechend.
- Teuerster Preis No tests
-Implementiere in der Klasse Item die Methode getMostExpensivePrice(), die den höchsten Preis unter allen Item-Objekten zurückgibt, den es jemals gab. Du kannst davon ausgehen, dass Items ihre Werte ausschließlich durch den Setter bekommen und diese Werte nie negativ sind. Wenn es noch kein Item gibt, soll die Methode 0 zurückgeben.
- toString No tests
-Implementiere in der Klasse Item die toString() Methode. Sie soll den String "Item⎵<kind>⎵costs⎵<price>" zurückgeben. Ersetze dabei natürlich <kind> und <price> durch die eigentlichen Werte ohne die spitzen Klammern und ersetze wie bei den Hausaufgaben die "⎵" durch jeweils genau ein Leerzeichen.
- Steine No tests
-Implementiere die Methoden findStones(int amount) und getStones() in der Klasse Penguin. Wenn ein Pinguin amount-viele Steine findet, gehen die durch die findStones-Methode in seinen Besitz über. getStones() gibt die Anzahl der Steine zurück, die ein Penguin besitzt.
- Lost & Found No tests
-Implementiere die Methoden findItem(Item item), loseItem() und currentItemKind() in der Klasse Penguin. Mit findItem(Item item) findet ein Pinguin ein Item und besitzt es dann. Mit loseItem() verliert er sein Item, falls er eins hat. loseItem() gibt zudem zurück, ob tatsächlich ein Item verlorengegangen ist. Wenn der Penguin ein Item trägt, gibt currentItemKind() den Namen des derzeit getragenen Items zurück. Sonst gibt sie null zurück. Ein Pinguin kann zu jedem Zeitpunkt nur genau ein Item tragen und verliert automatisch das alte, wenn er ein neues findet.
- Handel No tests
-Wenn zwei Pinguine sich treffen, und genau einer davon ein Item besitzt, können sie Handel betreiben. Dabei wird das Item immer für einen Stein mehr verkauft als es aktuell wert ist und ist danach entsprechend mehr wert. Natürlich wird nur verkauft, wenn der andere Pinguin es sich leisten kann. Implementiere die Methode tradeWith(Penguin penguin) in der Klasse Penguin, die diesen Handel modelliert. Sie soll am Ende zurückgeben, ob der Verkauf stattgefunden hat.
- Net-worth No tests
-Implementiere die Methode netWorth() in der Klasse Penguin. Sie gibt zurück, wieviel ein Pinguin besitzt, wobei der Besitz sich aus der Summe des Werts des getragen Items (falls vorhanden) und der Anzahl der Steine ergibt.
+Bäckerei
+Die Klasse Bakery repräsentiert eine Bäckerei, die ein Array von Kuchen führt.
+
+ Am praktischsten No tests
+Implementiere die Methode findMostPracticalCake in der Klasse Bakery, die den praktischsten Kuchen in der Bäckerei zurückgibt. Der praktischste Kuchen ist der Kuchen mit der höchsten Praktikabilität, wie in der ersten Teilaufgabe definiert.
+Hinweis 1: Wenn es mehrere Kuchen mit der gleichen Praktikabilität gibt, kann ein beliebiger dieser Kuchen zurückgegeben werden. Sind in der Bäckerei keine Kuchen vorhanden, soll null zurückgegeben werden.
+
+Hinweis 2: Solltest du practicality nicht bearbeitet haben, kannst du diese Aufgabe trotzdem bearbeiten. Gehen einfach davon aus, dass die Implementierung von practicality korrekt ist.
+
+Beispiel: Bei 3 Kuchen mit Praktikabilität 15, 1 und 13 soll der Kuchen mit 15 zurückgegeben werden.
+
+ Die bessere Wahl No tests
+Implementiere nun die Methode findBetterCake(Cake option1, Cake option2, int numberOfEaters) in der Klasse Bakery, die zwischen zwei Kuchenoptionen die bessere Wahl für eine Gruppe von numberOfEaters Personen trifft. Die bessere Wahl ist der Kuchen, bei dem der geringere Prozentsatz an Kuchen verschwendet wird, wenn der Kuchen unter numberOfEaters Personen aufgeteilt wird, wie in der zweiten Teilaufgabe definiert. Wird beim Teilen beider Kuchen derselbe Prozentsatz an Kuchen verschwendet, dann soll der Kuchen mit weniger Stücken zurückgegeben werden. Sind die beiden Kuchen auch in der Anzahl der Stücke gleich, kann einer der beiden Kuchen zurückgegeben werden.
+Hinweis: Du kannst davon ausgehen, dass option1 und option2 niemals null sind.
+
+Beispiel: Bei zwei Kuchen mit jeweils 15 und 12 Stücken wird bei einer Gruppengröße von 12 der Kuchen mit 12 Stücken zurückgegeben.
+
+ Die beste Wahl No tests
+Implementiere die Methode findCakeFor(int numberOfEaters) in der Klasse Bakery, die den besten Kuchen für eine Gruppe von numberOfEaters Personen findet (definiert durch den Wert von findBetterCake). Sind mehrere Kuchen die beste Wahl, so soll ein beliebiger dieser Kuchen zurückgegeben werden.
+Hinweis 1: Sind in der Bäckerei keine Kuchen vorhanden, soll null zurückgegeben werden.
+
+Hinweis 2: Solltest du findBetterCake nicht bearbeitet haben, kannst du diese Aufgabe trotzdem bearbeiten. Gehen einfach davon aus, dass die Implementierung von findBetterCake korrekt ist.
+
+Blechkuchen
+Die Klasse SheetCake beschreibt einen rechteckförmigen Blechkuchen, dessen Stücke in einem Raster angeordnet sind. Wie lecker das Stück an der Koordinate (x, y) ist, wird durch den ganzzahligen Wert tastiness[x][y] beschrieben!
+
+Hinweis: Im Template findest du einige Hilfsmethoden die du zur Bearbeitung der Aufgaben nutzen kannst:
+width() gibt die Breite des Blechkuchens zurück
+height() gibt die Höhe des Blechkuchens zurück
+max(int a, int b) gibt den größeren der beiden Parameter zurück
+min(int a, int b) gibt den kleineren der beiden Parameter zurück
+ Durchschnitt No tests
+Implementiere die Methode averageTastiness() in der Klasse SheetCake, die den durchschnittlichen Schmackhaftigkeits-Wert (als Kommazahl) aller Stücke des Blechkuchens zurückgibt.
+Beispiel: averageTastiness() = 8.5
+image.png
+
+ Lecker wo? No tests
+Implementiere die Methode tastinessAround(int x, int y, int size). Diese Methode soll die Gesamtsumme der Schmackhaftigkeits-Werte aller Stücke berechnen, die sich in einem size×size großen quadratischen Bereich befinden.
+Der Punkt (x, y) gibt die zentrale Koordinate dieses quadratischen Bereichs an.
+Der Parameter size ist dabei stets eine ungerade, positive Zahl (z.B. 1, 3, 5, ...).
+Hinweis: Das size×size Quadrat, das auf (x, y) zentriert ist, kann über die Ränder des Kuchens hinausragen. Es sollen natürlich nur die Stellen betrachtet werden, die sich auf dem Kuchen befinden!
+
+Beispiel: tastinessAround(1, 1, 3) = 54
+
+image.png
